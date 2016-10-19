@@ -50,7 +50,7 @@ function confirmBookingGO(session, args, next) {
    console.log('Booking started for GO');
    var imgURL = 'https://2q72xc49mze8bkcog2f01nlh-wpengine.netdna-ssl.com/wp-content/uploads/2011/12/New-Logo-Vertical-Dark.jpg';
    var text = '';
-    text += ' \n\n';
+    text += ' \n';
     text += 'Total Amount INR: 172.90' + ' \n';
     text += 'Driver: Johnson R' + ' \n';
     text += 'Vehicle: Tata Indica (KA W 7741)';
@@ -64,7 +64,7 @@ function confirmBookingX(session, args, next) {
    console.log('Booking started for X');
    var imgURL = 'http://cdn.bgr.com/2014/11/uber-car-cheap.png';
    var text = '';
-    text += ' \n\n';
+    text += ' \n';
     text += 'Total Amount INR: 254.90' + ' \n';
     text += 'Driver: Harison Reddy' + ' \n';
     text += 'Vehicle: Ford Fiesta (KA WX 0741)';
@@ -77,7 +77,7 @@ function confirmBookingXL(session, args, next) {
    console.log('Booking started for XL');
    var imgURL = 'http://blogs-images.forbes.com/alanohnsman/files/2016/09/Exterior3Small-1200x650.jpg?width=960';
    var text = '';
-    text += ' \n\n';
+    text += ' \n';
     text += 'Total Amount INR: 356.14' + ' \n';
     text += 'Driver: Rafeal Nadal' + ' \n';
     text += 'Vehicle: Tata Safari (AP WP 7741)';
@@ -140,7 +140,7 @@ function getCarsThumbnailGO(session, toLocation) {
     thumbnail.subtitle('To: ' + toLocation);
 
     var text = '';
-    text += ' \n\n';
+    text += ' \n';
     text += 'Est. Price: 172.90' + ' \n';
     text += 'Duration: 35 min' + ' \n';
     text += 'Distance: 15.4 km';
@@ -158,7 +158,7 @@ function getCarsThumbnailX(session, toLocation) {
     thumbnail.subtitle('To: ' + toLocation);
 
     var text = '';
-    text += ' \n\n';
+    text += ' \n';
     text += 'Est. Price: 254.90' + ' \n';
     text += 'Duration: 30 min' + ' \n';
     text += 'Distance: 15.4 km';
@@ -176,7 +176,7 @@ function getCarsThumbnailXL(session, toLocation) {
     thumbnail.subtitle('To: ' + toLocation);
 
     var text = '';
-    text += ' \n\n';
+    text += ' \n';
     text += 'Est. Price: 356.14' + ' \n';
     text += 'Duration: 25 min' + ' \n';
     text += 'Distance: 15.4 km';
