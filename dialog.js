@@ -120,7 +120,7 @@ function searchProfiles(session, results, next) {
          var thumbnail2 = getCarsThumbnailX(session, toLocation);
          var thumbnail3 = getCarsThumbnailXL(session, toLocation);
          var thumbnails = [thumbnail1, thumbnail2, thumbnail3];
-        var thumbnails = [thumbnail1];
+        
          
          var message = new builder.Message(session).attachments(thumbnails).attachmentLayout('carousel');
          session.send(message);
