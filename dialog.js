@@ -147,7 +147,7 @@ function getCarsThumbnailGO(session, toLocation) {
     text += 'Distance: 15.4 km';
     thumbnail.text(text);
 
-    //thumbnail.tap(new builder.CardAction.postBack(session, 'G'));
+    thumbnail.tap(new builder.CardAction.postBack(session, 'G'));
     return thumbnail;
 }
 
