@@ -136,7 +136,7 @@ function searchProfiles(session, results, next) {
 function getCarsThumbnailGO(session, toLocation) {
     var thumbnail = new builder.ThumbnailCard(session);
     thumbnail.title('Uber GO');
-    thumbnail.images([builder.CardImage.create(session,'https://2q72xc49mze8bkcog2f01nlh-wpengine.netdna-ssl.com/wp-content/uploads/2011/12/New-Logo-Vertical-Dark.jpg')]);
+    //thumbnail.images([builder.CardImage.create(session,'https://2q72xc49mze8bkcog2f01nlh-wpengine.netdna-ssl.com/wp-content/uploads/2011/12/New-Logo-Vertical-Dark.jpg')]);
 
     //thumbnail.subtitle('To: ' + toLocation);
 
@@ -147,7 +147,7 @@ function getCarsThumbnailGO(session, toLocation) {
     //text += 'Distance: 15.4 km';
     //thumbnail.text(text);
 
-    thumbnail.tap(new builder.CardAction.postBack(session, 'G'));
+    //thumbnail.tap(new builder.CardAction.postBack(session, 'G'));
     return thumbnail;
 }
 
