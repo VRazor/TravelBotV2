@@ -100,8 +100,6 @@ function bookUBERCars(session, cabType, subtext, imageURL, text) {
 }
 
 var options = [
-    'Book a Flight',
-    'Book Train',
     'Book an UBER Cab'
     
 ]
