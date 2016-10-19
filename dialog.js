@@ -117,9 +117,9 @@ function searchProfiles(session, results, next) {
     } else {
         console.log("Book uber to location");
         var thumbnail1 = getCarsThumbnailGO(session, toLocation);
-         //var thumbnail2 = getCarsThumbnailX(session, toLocation);
-         //var thumbnail3 = getCarsThumbnailXL(session, toLocation);
-         //var thumbnails = [thumbnail1, thumbnail2, thumbnail3];
+         var thumbnail2 = getCarsThumbnailX(session, toLocation);
+         var thumbnail3 = getCarsThumbnailXL(session, toLocation);
+         var thumbnails = [thumbnail1, thumbnail2, thumbnail3];
         var thumbnails = [thumbnail1];
          
          var message = new builder.Message(session).attachments(thumbnails).attachmentLayout('carousel');
@@ -136,7 +136,7 @@ function searchProfiles(session, results, next) {
 function getCarsThumbnailGO(session, toLocation) {
     var thumbnail = new builder.ThumbnailCard(session);
     thumbnail.title('Uber GO');
-    //thumbnail.images([builder.CardImage.create(session,'https://2q72xc49mze8bkcog2f01nlh-wpengine.netdna-ssl.com/wp-content/uploads/2011/12/New-Logo-Vertical-Dark.jpg')]);
+    thumbnail.images([builder.CardImage.create(session,'https://2q72xc49mze8bkcog2f01nlh-wpengine.netdna-ssl.com/wp-content/uploads/2011/12/New-Logo-Vertical-Dark.jpg')]);
 
     thumbnail.subtitle('To: ' + toLocation);
 
@@ -147,7 +147,7 @@ function getCarsThumbnailGO(session, toLocation) {
     text += 'Distance: 15.4 km';
     thumbnail.text(text);
 
-    thumbnail.tap(new builder.CardAction.postBack(session, 'G'));
+    thumbnail.tap(new builder.CardAction.openUrl(session, 'www.uber.com'));
     return thumbnail;
 }
 
@@ -165,7 +165,7 @@ function getCarsThumbnailX(session, toLocation) {
     text += 'Distance: 15.4 km';
     thumbnail.text(text);
 
-    thumbnail.tap(new builder.CardAction.postBack(session, 'X'));
+    thumbnail.tap(new builder.CardAction.openUrl(session, 'www.uber.com'));
     return thumbnail;
 }
 
@@ -183,7 +183,7 @@ function getCarsThumbnailXL(session, toLocation) {
     text += 'Distance: 15.4 km';
     thumbnail.text(text);
 
-    thumbnail.tap(new builder.CardAction.postBack(session, 'XL'));
+    thumbnail.tap(new builder.CardAction.openUrl(session, 'www.uber.com'));
     return thumbnail;
 }
 
