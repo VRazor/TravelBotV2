@@ -138,14 +138,14 @@ function getCarsThumbnailGO(session, toLocation) {
     thumbnail.title('Uber GO');
     //thumbnail.images([builder.CardImage.create(session,'https://2q72xc49mze8bkcog2f01nlh-wpengine.netdna-ssl.com/wp-content/uploads/2011/12/New-Logo-Vertical-Dark.jpg')]);
 
-    //thumbnail.subtitle('To: ' + toLocation);
+    thumbnail.subtitle('To: ' + toLocation);
 
-    //var text = '';
-    //text += ' \n';
-    //text += 'Est. Price: 172.90' + ' \n';
-    //text += 'Duration: 35 min' + ' \n';
-    //text += 'Distance: 15.4 km';
-    //thumbnail.text(text);
+    var text = '';
+    text += ' \n';
+    text += 'Est. Price: 172.90' + ' \n';
+    text += 'Duration: 35 min' + ' \n';
+    text += 'Distance: 15.4 km';
+    thumbnail.text(text);
 
     //thumbnail.tap(new builder.CardAction.postBack(session, 'G'));
     return thumbnail;
