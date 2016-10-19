@@ -117,9 +117,10 @@ function searchProfiles(session, results, next) {
     } else {
         console.log("Book uber to location");
         var thumbnail1 = getCarsThumbnailGO(session, toLocation);
-         var thumbnail2 = getCarsThumbnailX(session, toLocation);
-         var thumbnail3 = getCarsThumbnailXL(session, toLocation);
-         var thumbnails = [thumbnail1, thumbnail2, thumbnail3];
+         //var thumbnail2 = getCarsThumbnailX(session, toLocation);
+         //var thumbnail3 = getCarsThumbnailXL(session, toLocation);
+         //var thumbnails = [thumbnail1, thumbnail2, thumbnail3];
+        var thumbnails = [thumbnail1];
          
          var message = new builder.Message(session).attachments(thumbnails).attachmentLayout('carousel');
          session.send(message);
@@ -137,14 +138,14 @@ function getCarsThumbnailGO(session, toLocation) {
     thumbnail.title('Uber GO');
     thumbnail.images([builder.CardImage.create(session,'https://2q72xc49mze8bkcog2f01nlh-wpengine.netdna-ssl.com/wp-content/uploads/2011/12/New-Logo-Vertical-Dark.jpg')]);
 
-    thumbnail.subtitle('To: ' + toLocation);
+    //thumbnail.subtitle('To: ' + toLocation);
 
-    var text = '';
-    text += ' \n';
-    text += 'Est. Price: 172.90' + ' \n';
-    text += 'Duration: 35 min' + ' \n';
-    text += 'Distance: 15.4 km';
-    thumbnail.text(text);
+    //var text = '';
+    //text += ' \n';
+    //text += 'Est. Price: 172.90' + ' \n';
+    //text += 'Duration: 35 min' + ' \n';
+    //text += 'Distance: 15.4 km';
+    //thumbnail.text(text);
 
     thumbnail.tap(new builder.CardAction.postBack(session, 'G'));
     return thumbnail;
